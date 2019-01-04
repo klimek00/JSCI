@@ -7,6 +7,7 @@
   </head>
   <body>
     <?php
+      
       include 'header.html';
       include 'navigation_bar.html';
       include 'main_content.html';

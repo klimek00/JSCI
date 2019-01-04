@@ -7,10 +7,14 @@
   </head>
   <body>
     <?php
-      
-      include 'header.html';
+
+      include 'header.php';
+      if (isset($_GET["page"]) && $_GET["page"] == 'calc') {
+        include 'calculator.php';
+      } else {
       include 'navigation_bar.html';
       include 'main_content.html';
+    }
       include 'footer.html';
     ?>
   </body>

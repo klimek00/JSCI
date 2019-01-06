@@ -5,7 +5,7 @@
       
     <a class='p-3 text-dark' href='index.php?page=calc'>Oblicz BMI</a>
       
-      <a class="p-3 text-dark" href="index.php">Pokaż wskazówki</a>
+      <a class="p-3 text-dark" href="tips.php">Pokaż wskazówki</a>
     </nav>
     <a class="btn btn-outline-primary" href="login.php">Zaloguj się!</a>
   </div>

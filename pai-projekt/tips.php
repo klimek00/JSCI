@@ -6,15 +6,9 @@
     ?>
 </head>
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Wskazówki do życia</h5>   
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Oblicz BMI</a>
-            <a class="p-2 text-dark" href="index.php">Strona główna</a>
-        </nav>
-        <a class="btn btn-outline-primary" href="#">Zaloguj się!</a>
-    </div>
-</header>
+   <?php
+      include 'header.php';
+      ?>
 <div class="container">
     <div class="row">
         <div class="col-md-4">

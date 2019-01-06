@@ -10,7 +10,7 @@
       include 'header.php';
       ?>
       <div class="container">
-      <h1 class="display-4"> Zaloguj się aby w pełni korzystać z mozliwości kalkulatora!</h1>
+      <h1 class="display-4 text-center"> Zaloguj się aby w pełni korzystać z mozliwości kalkulatora!</h1>
       <form>
           <div class="form-group">
           
@@ -21,13 +21,13 @@
                <label for="password">Wprowadź hasło poniżej:</label>
               <input type="password" class="form-control" id="password">
           </div>
-          <div>
+          <div class="text-center">
               <button type="submit" class="btn btn-primary">Zaloguj!</button> 
           </div>
         </form>
-          <div>
-          <h3> A jeżeli jeszcze nie masz konta to możesz je szybko założyć klikając w prycisk poniżej:</h3>
-          <a href="register.php" class="btn btn-secondary">Zarejestruj się!</a>
+          <div class="margin-top-bottom-20px text-center">
+              <h1 class="lead">A jeżeli jeszcze nie masz konta to możesz je szybko założyć klikając w przycisk poniżej:</h1>
+              <a href="register.php" class="btn btn-secondary text-center">Zarejestruj się!</a>
       </div>
       </div>
       <?php

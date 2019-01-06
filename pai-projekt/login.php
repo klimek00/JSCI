@@ -14,7 +14,7 @@
       <form>
           <div class="form-group">
           
-            <label for="login">Wprowadź login poniżej:</label>
+            <label for="login">Wprowadź nazwę użytkownika poniżej:</label>
               <input type="text" class="form-control" id="login">
           </div>
           <div class="form-group">

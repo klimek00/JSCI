@@ -1,0 +1,11 @@
+<?php
+    $dbhost="localhost";
+    $dbuser="root";
+    $dbpass="";
+    $dbname="paidb";
+    $dbu="users";
+    $dblog="login";
+    $dbpass="passwd";
+    $dbart="articles";
+    $dbcats="categories";
+?>

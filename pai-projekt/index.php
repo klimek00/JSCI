@@ -13,6 +13,7 @@
         include 'calculator.php';
       } else {
       include 'main_content.html';
+          include 'carousel.php';
     }
       include 'footer.html';
     ?>

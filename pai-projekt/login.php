@@ -6,7 +6,7 @@
     ?>
   </head>
   <body>
-      <?php
+    <?php
       include 'header.php';
       ?>
       <div class="container">
@@ -31,11 +31,7 @@
       </div>
       </div>
       <?php
-      include 'footer.html';
-      include 'config.php';
-      
-      
-      
+       include 'footer.html';
       ?>
     </body>
 </html>

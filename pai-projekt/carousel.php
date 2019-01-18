@@ -14,24 +14,32 @@
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
   
-  <!-- The slideshow -->
+  <!-- carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="./img/1.jpg" alt="Los Angeles" width="300" height="200">
-        <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-            <p>We had such a great time in LA!</p>
+        <div class="carousel-caption text-danger">
+        <h3 class="display-4 bg-light">NAUKOWCY ZADZIWIENI</h3>
+            <h3 class="bg-light">Preparat na odchudzanie rowniez odmladza!</h3>
         </div>
     </div>
     <div class="carousel-item">
       <img src="./img/2.jpg" alt="Chicago" width="300" height="200">
+        <div class="carousel-caption text-danger">
+        <h3 class="display-4 bg-light">PARAPET OCIEPLAJĄCY</h3>
+            <h3 class="bg-light">Dzieki niemu mozesz sie opierac i nie zmarznac!</h3>
+        </div>
     </div>
     <div class="carousel-item">
       <img src="./img/3.jpg" alt="New York" width="300" height="200">
+        <div class="carousel-caption text-danger">
+        <h3 class="display-4 bg-light">KOMPUTER ZA 2 TYSIACE</h3>
+            <h3 class="bg-light">intel core i5! dwa giga ramu! system windows! pamięc jeden tera! karta graficzna radeon!</h3>
+        </div>
     </div>
   </div>
   
-  <!-- Left and right controls -->
+  <!-- move left/right-->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>

@@ -9,12 +9,12 @@
     <?php
 
       include 'header.php';
-      if (isset($_GET["page"]) && $_GET["page"] == 'calc') {
-        include 'calculator.php';
-      } else {
-      include 'main_content.html';
-          
-    }
+    //   if (isset($_GET["page"]) && $_GET["page"] == 'calc') {
+    //     include 'calculator.php';
+    //   } else {
+    //   include 'main_content.html';
+    //
+    // }
       include 'footer.html';
     ?>
   </body>

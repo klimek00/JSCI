@@ -33,7 +33,7 @@
                 <a class="dropdown-item" href="#">xd</a>
                 <a class="dropdown-item" href="#">xd</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">xd</a>
+                <a class="dropdown-item" href="#">Wyloguj</a>
               </div>
             </li>
           </ul>

@@ -15,37 +15,54 @@
               Wypełnij poniższy formularz aby utworzyć konto: <br><br>
                 Pola oznaczone symbolem: * są obowiązkowe do wypełnienia aby móc się zarejestrować, pozostałe tylko opcjonalne! 
           </p>
-      <form>
+      <form method='post'>
           <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Adres e-mail: </span> 
+                    <span class="input-group-text">Adres e-mail:* </span> 
                 </div>
-              <input type="email" class="form-control" id="mail" required>*
+              <input type="email" class="form-control" name="mail" id="mail" required>
           </div>
           
           <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Nazwa użytkownika: </span> 
+                    <span class="input-group-text">Nazwa użytkownika:* </span> 
                 </div>
-              <input type="text" class="form-control" id="login" required>*
+              <input type="text" class="form-control" name="login" id="login" required>
           </div>
           
           <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Hasło: </span> 
+                    <span class="input-group-text">Hasło:* </span> 
                 </div>
-              <input type="password" class="form-control" id="login" required>*
+              <input type="password" class="form-control" name="passwd" id="passwd" required>
           </div>
           
           <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Powtórz hasło: </span> 
+                    <span class="input-group-text">Powtórz hasło:* </span> 
                 </div>
-              <input type="password" class="form-control" id="login" required>*
+              <input type="password" class="form-control" name="passwdCheck" id="passwdCheck" required>
           </div>
-        
-         
-          <p class="lead text-danger text-center">Rejestrując się akceptujesz <a href="regulamin.html"> regulamin </a> </p>
+          
+          <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Data urodzenia: </span> 
+                </div>
+              <input type="date" class="form-control" name="age" id="age">
+          </div>
+          
+          <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <select class="form-control" name="gender">
+                        <option value="--">Wybierz płeć</option>
+                        <option value="women">Kobieta</option>
+                        <option value="men">Mężczyzna</option>
+                        <option value="what">Rasa do gazu</option>
+                    </select>
+                </div>
+          </div>
+          
+          <p class="lead text-danger text-center">Rejestrując się akceptujesz <a href="reg.html"> regulamin </a> </p>
           <div class="text-center"> 
               <button type="submit" class="btn btn-primary">Zarejestruj się!</button> 
           </div>

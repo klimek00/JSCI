@@ -1,4 +1,17 @@
-<div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <?php
+     include 'head_HTML.html';
+    ?>
+  </head>
+  <body>
+    <?php
+
+      include 'header.php';
+      
+    ?>
+      <div>
 <ol>
 <li>Postanowienia ogólne</li>
 <li>Definicje</li>
@@ -143,3 +156,8 @@ przepisy prawa polskiego.
 </li>
 </ol>
 </div>
+       <?php
+     include 'footer.html';
+    ?>
+  </body>
+</html>

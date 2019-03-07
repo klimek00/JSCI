@@ -11,7 +11,7 @@
       include 'header.php';
 
     ?>
-      <div>
+      <div style="margin-top: 100px">
 <ol>
 <li>Postanowienia ogólne</li>
 <li>Definicje</li>

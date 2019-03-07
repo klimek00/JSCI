@@ -5,7 +5,7 @@
   }
 </style>
 
-<div id="demo" class="carousel slide w-50 h-50 mx-auto" data-ride="carousel">
+<div id="demo" class="carousel slide w-50 h-50 mx-auto" data-ride="carousel" style="margin-top: 100px;">
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
@@ -13,7 +13,7 @@
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
-  
+
   <!-- carousel -->
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -38,7 +38,7 @@
         </div>
     </div>
   </div>
-  
+
   <!-- move left/right-->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>

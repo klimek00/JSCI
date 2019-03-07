@@ -9,7 +9,7 @@
     <?php
 
       include 'header.php';
-      include 'advertisement.php';
+      include 'main_content.php';
       include 'footer.html';
     ?>
   </body>

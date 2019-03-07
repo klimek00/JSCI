@@ -9,11 +9,11 @@
     <?php
       include 'header.php';
       ?>
-      <div class="container">
+      <div class="container" style="margin-top: 100px;">
       <h1 class="display-4 text-center"> Zaloguj się aby w pełni korzystać z mozliwości kalkulatora!</h1>
       <form>
           <div class="form-group">
-          
+
             <label for="login">Wprowadź nazwę użytkownika poniżej:</label>
               <input type="text" class="form-control" id="login">
           </div>
@@ -22,7 +22,7 @@
               <input type="password" class="form-control" id="password">
           </div>
           <div class="text-center">
-              <button type="submit" class="btn btn-primary">Zaloguj!</button> 
+              <button type="submit" class="btn btn-primary">Zaloguj!</button>
           </div>
         </form>
           <div class="margin-top-bottom-20px text-center">

@@ -76,7 +76,7 @@ if (!isset($_SESSION["id"])){ ?>
                 echo '
                 <div class="alert alert-success alert-dismissible fade show" style="margin-top: 10px;">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <strong>Sukces!</strong> Zalogowano pomyślnie.
+                  <strong>Sukces!</strong> Zalogowano pomyślnie. <a href="index.php" class="alert-link">Wróć do strony głównej</a>.
                 </div>
                 ';
               }

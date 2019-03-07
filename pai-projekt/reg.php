@@ -9,8 +9,8 @@
     <?php
 
       include 'header.php';
-      
-    ?>
+
+    ?> xd
       <div>
 <ol>
 <li>Postanowienia ogólne</li>

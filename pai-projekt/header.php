@@ -27,6 +27,7 @@
                 echo '<a class="dropdown-item" href="adminPanel.php">Panel administratora</a>';
               }
             }
+            $db = null;
           ?>
           <a class="dropdown-item" href="history.php">Historia</a>
           <!-- <a class="dropdown-item" href="#">Ustawienia</a> -->

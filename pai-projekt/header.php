@@ -28,7 +28,7 @@
               }
             }
           ?>
-          <a class="dropdown-item" href="#">Historia</a>
+          <a class="dropdown-item" href="history.php">Historia</a>
           <!-- <a class="dropdown-item" href="#">Ustawienia</a> -->
           <a class="dropdown-item" href="logout.php">Wyloguj</a>
         </div>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+if (!isset($_SESSION["id"])){ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,7 +29,6 @@
           </div>
         </form>
       <?php
-      session_start();
         $mess ='
         <div class="container alert alert-danger alert-dismissible fade show" style="margin-top: 20px">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -96,3 +98,6 @@
     ?>
   </body>
 </html>
+<?php } else {
+  header("Location: index.php");
+} ?>

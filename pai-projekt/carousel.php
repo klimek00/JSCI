@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <style>
 .carousel-inner img {
       width: 100%;

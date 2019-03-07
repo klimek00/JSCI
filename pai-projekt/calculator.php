@@ -25,12 +25,18 @@
       <button type="button" class="btn btn-primary btm-md" onClick="calcBMI()">Oblicz!</button>
   </div>
   <br>
-  <p class="h4" id="userBMI"></p>
+    <p class="h4" id="userBMI"></p>
 </div>
 <div class="alert alert-danger" style="display: none" id="alert">
   Wypełnij wszystkie pola!!!
 </div>
+<div id="infoSave"></div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-default" data-dismiss="modal">Zapisz</button>
-  <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
+  <?php
+    session_start();
+    if (isset($_SESSION["id"])) {
+      echo '<button type="button" class="btn btn-default" onClick="saveBMI()">Zapisz</button>';
+    }
+  ?>
+  <button type="button" class="btn btn-danger" data-dismiss="modal" onClick="clearBMI()">Zamknij</button>
 </div>

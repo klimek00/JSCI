@@ -67,7 +67,7 @@
                 $id = (int)$rows["ID"];
                 $_SESSION["id"] = $id;
                 echo '
-                <div class="alert alert-success alert-dismissible fade show">
+                <div class="alert alert-success alert-dismissible fade show" style="margin-top: 10px;">
                   <button type="button" class="close" data-dismiss="alert">&times;</button>
                   <strong>Sukces!</strong> Zalogowano pomyślnie.
                 </div>

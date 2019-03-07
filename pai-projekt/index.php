@@ -10,7 +10,9 @@
       session_start();
       include 'header.php';
       include 'main_content.php';
-      echo $_SESSION["id"];
+      if (isset($_SESSION["id"])) {
+        echo $_SESSION["id"];
+      }
       include 'footer.html';
     ?>
   </body>

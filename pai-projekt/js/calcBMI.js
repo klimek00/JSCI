@@ -1,3 +1,14 @@
+function getXMLHttpRequest(){
+	  try { return new XMLHttpRequest();} catch(err1) {
+		try { return new ActiveXObject('Msxml2.XMLHTTP'); } catch(err2) {
+		  try { return new ActiveXObject('Microsoft.XMLHTTP');} catch(err3) {
+			alert("AJAX failed");
+			return false; }
+		}
+	 }
+}
+let x;
+let r = getXMLHttpRequest();
 function calcBMI(){
   let alert = document.getElementById('alert');
   let text = document.getElementById('userBMI');
@@ -5,14 +16,16 @@ function calcBMI(){
     document.getElementById('alert').style.display = "none";
     let weight = document.getElementById('weight').value;
     let growth = document.getElementById('growth').value;
-    console.log(growth);
     if (weight == "" || growth == "") {
          document.getElementById('alert').style.display = "block";
+         text.innerHTML = "";
+         document.getElementById('infoSave').innerHTML = "";
+         x = null;
+
     } else {
        document.getElementById('alert').style.display = "none";
       let bmi = (weight / Math.pow(growth,2))*10000;
-      let x = Math.round(bmi*100)/100;
-      console.log(x);
+      x = Math.round(bmi*100)/100;
 
       if (x <= 18.5) {
         text.innerHTML = "Twoje BMI wynosi: "+x+". Wskaźnik wskazuje niedowagę.";
@@ -30,6 +43,28 @@ function calcBMI(){
     }
   } else {
      document.getElementById('alert').style.display = "block";
+     text.innerHTML = "";
+     document.getElementById('infoSave').innerHTML = "";
+     x = null;
   }
-
+  return x;
+}
+function showInfo() {
+  document.getElementById('infoSave').innerHTML = r.responseText;
+}
+function saveBMI() {
+  let bmi = calcBMI();
+  console.log(bmi);
+    r.open("GET", "saveBMI.php?bmi="+bmi);
+    r.onreadystatechange = showInfo;
+    r.send(null);
+}
+function clearBMI() {
+  let weight = document.getElementById('weight').value = "";
+  let growth = document.getElementById('growth').value = "";
+  document.getElementById('w').checked = false;
+  document.getElementById('m').checked = false;
+  document.getElementById('alert').style.display = "none";
+  document.getElementById('userBMI').innerHTML = "";
+  document.getElementById('infoSave').innerHTML = "";
 }

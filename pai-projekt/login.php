@@ -26,6 +26,7 @@
           </div>
         </form>
       <?php
+      session_start();
         $mess ='
         <div class="container alert alert-danger alert-dismissible fade show" style="margin-top: 20px">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -39,10 +40,13 @@
             if (empty($login) || empty($passwd)) {
               echo $mess;
             } else {
-            $db = new PDO("sqlite:database.sqlite");
-            $query = "SELECT * FROM users WHERE login = '$login' AND passwd ='$passwd'";
-            $result = $db->prepare($query);
-            $result->execute();
+            try {
+              $db = new PDO("sqlite:database.sqlite");
+            } catch (PDOException $e) {
+              echo "Error!".$e->getMessage();
+            }
+            $query = "SELECT id, login, passwd FROM users WHERE login = '$login' AND passwd ='$passwd'";
+            $result = $db->query($query);
             if ($result === false) {
               echo '
               <div class="container alert alert-danger alert-dismissible fade show" style="margin-top: 20px">
@@ -51,9 +55,26 @@
               </div>
               ';
             } else {
-              $count = $result->rowCount();
-              echo "$count";
+              $rows = $result->fetch();
+              if ($rows === false) {
+                echo '
+                <div class="container alert alert-danger alert-dismissible fade show" style="margin-top: 20px">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  <strong>Login lub hasło jest niepoprawne</strong>
+                </div>
+                ';
+              } else {
+                $id = (int)$rows["ID"];
+                $_SESSION["id"] = $id;
+                echo '
+                <div class="alert alert-success alert-dismissible fade show">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  <strong>Sukces!</strong> Zalogowano pomyślnie.
+                </div>
+                ';
+              }
             }
+            $db = null;
           }
           } else {
             echo $mess;

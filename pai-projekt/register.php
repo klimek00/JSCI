@@ -100,7 +100,7 @@ if (!isset($_SESSION["id"])){ ?>
                 $database = new PDO('sqlite:database.sqlite');
                 $loginCheck = "SELECT 'login' FROM users WHERE login='$login'";
                 $loginCheckRes = $database->query($loginCheck);
-                $loginInDatabase = $loginCheckRes->fetch();
+                $loginInDatabase = $loginCheckRes->fetch(); 
 
                 if ($loginInDatabase != 0) {
                     echo "<div class='alert alert-danger container' style='margin-top: 10px;'>

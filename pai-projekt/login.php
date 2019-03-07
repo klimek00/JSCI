@@ -63,6 +63,11 @@
                   <strong>Login lub hasło jest niepoprawne</strong>
                 </div>
                 ';
+                require 'findIP.php';
+                $date = date("Y-m-d H:i:s");
+                $ip = getRealIpAddr();
+                $sql = "INSERT INTO badLogin ('login', 'date', 'ip') VALUES ('$login','$date','$ip')";
+                $result = $db->query($sql);
               } else {
                 $id = (int)$rows["ID"];
                 $_SESSION["id"] = $id;

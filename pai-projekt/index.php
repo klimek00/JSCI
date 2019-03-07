@@ -9,6 +9,7 @@
     <?php
 
       include 'header.php';
+      include 'advertisement.php';
       include 'footer.html';
     ?>
   </body>

@@ -73,12 +73,8 @@ if (!isset($_SESSION["id"])){ ?>
               } else {
                 $id = (int)$rows["ID"];
                 $_SESSION["id"] = $id;
-                echo '
-                <div class="alert alert-success alert-dismissible fade show" style="margin-top: 10px;">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <strong>Sukces!</strong> Zalogowano pomyślnie. <a href="index.php" class="alert-link">Wróć do strony głównej</a>.
-                </div>
-                ';
+                header("Location: index.php");
+                  
               }
             }
             $db = null;

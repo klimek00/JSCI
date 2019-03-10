@@ -10,7 +10,16 @@
       include 'header.php';
     ?>
     <div class="container border" style="margin-top: 100px;">
-      Tu bedzie historia
+
+      <?php
+        if (isset($_SESSION["id"])) {
+            echo $_SESSION["id"];
+         }
+        
+      include 'wykres.php';
+            
+    ?>
+        
     </div>
     <?php
       include 'footer.html';

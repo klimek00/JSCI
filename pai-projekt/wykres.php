@@ -19,11 +19,12 @@
 <body>
 
 
-<div id="chart-carbon" class="chart"></div>
-
-    
+<div id="chart-carbon" class="container chart mx-auto"></div>
 
 <script class="code" type="text/javascript">
+    
+//dane do wykresu w pliku wykres_content.php    
+    
     function getXMLHttpRequest(){
 //FF,Chrome, Safari, Opere i inne normalne przegladarki
 	  try { return new XMLHttpRequest();} catch(err1) {
@@ -37,31 +38,20 @@
 	  }
 	} 
     
-var owoce; 
+var userHistory; 
 var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      owoce = JSON.parse(this.responseText);
-    }
-  };
-  xhttp.open("GET", "wykres_content.php", true);
-  xhttp.send();
-    
-
-var plot1, plot2; 
-var historyUser = [
-    [['2004-08-12',19], ['2004-09-12',20], ['2004-10-12',5.7], ['2004-12-12',3.2]],
-    
-];
-    
-
-
-$(document).ready(function(){
+      userHistory = JSON.parse(this.responseText);
+        
+        var plot1, plot2;
+        
+        $(document).ready(function(){
   options = {
       grid: {
           backgroundColor: "white",
       },
-     // series: seriesLabels, 
+      
       axesDefaults: {
           labelRenderer: $.jqplot.CanvasAxisLabelRenderer
       },
@@ -76,8 +66,8 @@ $(document).ready(function(){
       },
      
   };
-  carbonPlot = $.jqplot('chart-carbon', historyUser, $.extend(options, {
-      title: 'Carbon Sequestration over time',
+  carbonPlot = $.jqplot('chart-carbon', userHistory, $.extend(options, {
+      title: 'Twoja historia pomirów:',
       axes: {
         xaxis: {
           label: "Czas",
@@ -100,6 +90,14 @@ $(document).ready(function(){
   $('chart-carbon').change();
 
 });
+        
+    }
+  };
+  xhttp.open("GET", "wykres_content.php", true);
+  xhttp.send();
+    
+//dane do wykresu w pliku wykres_content.php  
+
 </script>
 </body>
 </html>

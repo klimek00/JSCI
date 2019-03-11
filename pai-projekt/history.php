@@ -11,13 +11,8 @@
     ?>
     <div class="container border" style="margin-top: 100px;">
 
-      <?php
-        if (isset($_SESSION["id"])) {
-            echo $_SESSION["id"];
-         }
-        
-      include 'wykres.php';
-            
+    <?php
+      include 'wykres.php'; 
     ?>
         
     </div>

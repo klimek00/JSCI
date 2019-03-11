@@ -7,8 +7,13 @@ try {
     } catch (PDOException $e) {
         echo "Error!".$e->getMessage();
     }
-
-    $idUser = $_SESSION["id"];
+    
+if(isset($_SESSION["id"])){
+   $idUser = $_SESSION["id"];
+}
+else{
+    echo "Brak uprawnień";
+}
             
     $query = "select date, bmiResult from chart where IDUser=$idUser order by ID desc limit 10;";
     $result = $db->query($query);
@@ -20,32 +25,18 @@ if ($result === false) {
                 <strong>Wystąpił problem z pobraniem wyników</strong><br>Być może nie ma jeszcze żadnych danych do wyświetlenia.
               </div>
               ';
-            } else {
+        } else {
+
     
-    //nie działa, problem z wpisaniem do tablicy $userHistory wpisów z bazy
-    
-    foreach ($result as $tmp){
-            $arr = array ($tmp['date'], $tmp['bmiResult']);
-       
-    }
+$arr = array();
     
 foreach ($result as $tmp){
-        $a[] = array ($tmp['date'], $tmp['bmiResult']);
-    }
+       $arr[] = array($tmp['date'], floatval($tmp['bmiResult']));
+    } 
     
-$a = array(
-    array('2017-01-01 05:03:22',23),
-    array('2017-01-05',21),
-    array('2017-02-04',25),
-    array('2017-01-03',22),
-    array('2017-01-07',26)
-)
-        
-     
-$userHistory = array ( 
-        $a;
-);
-    
+$userHistory = array ();
+   
+$userHistory[] = $arr;
      
 echo json_encode($userHistory);
  

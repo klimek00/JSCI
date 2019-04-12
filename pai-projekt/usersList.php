@@ -52,7 +52,7 @@
               echo "<td>".$value["dateOfBirth"]."</td>";
               echo "<td>".$value["gender"]."</td>";
               echo "<td>".$value["perm"]."</td>";
-              echo "<td><a href='modUser.php?id=".$value["ID"]."'>Modify</a> <br> <a href='delUser.php?id=".$value["ID"]."'>Delete</a></td>";
+              // echo "<td><a href='modUser.php?id=".$value["ID"]."'>Modify</a> <br> <a href='delUser.php?id=".$value["ID"]."'>Delete</a></td>";
               echo "</tr>";
             }
           }

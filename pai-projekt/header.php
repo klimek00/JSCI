@@ -17,7 +17,7 @@
           } catch (PDOException $e) {
             echo "Error!".$e->getMessage();
           }
-            $query = "SELECT * FROM users WHERE ID = $id AND perm = 1";
+            $query = "SELECT * FROM users WHERE ID = $id AND perm = 'admin'";
             $result = $db->query($query);
             if ($result === false) {
               echo 'Błąd!!!';

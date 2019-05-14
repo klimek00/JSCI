@@ -31,6 +31,7 @@
   Wypełnij wszystkie pola!!!
 </div>
 <div id="infoSave"></div>
+<h5 class="p-3 text-dark">Niewłaściwe BMI? <a href="calcKCAL.php">Oblicz dzienne zapotrzebowanie kaloryczne</a></h5>
 <div class="modal-footer">
   <?php
     session_start();

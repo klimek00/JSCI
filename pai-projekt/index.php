@@ -9,9 +9,6 @@
     <?php
       include 'header.php';
       include 'main_content.php';
-      if (isset($_SESSION["id"])) {
-        echo $_SESSION["id"];
-      }
       include 'footer.html';
     ?>
   </body>

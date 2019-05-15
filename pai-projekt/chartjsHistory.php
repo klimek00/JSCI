@@ -8,7 +8,7 @@
   } catch (PDOException $e) {
     echo $e->getMessage();
   }
-  $sql = "SELECT date, bmiResult FROM chart WHERE IDUser = $userid ORDER BY ID DESC LIMIT 10";
+  $sql = "SELECT date, bmiResult FROM chart WHERE IDUser = $userid ORDER BY ID ASC LIMIT 10";
   $result = $db->query($sql);
   if ($result === false) {
     echo '

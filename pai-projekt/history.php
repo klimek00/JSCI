@@ -14,7 +14,8 @@ if (isset($_SESSION["id"])) {
     <?php
       include 'header.php';
     ?>
-    <div class="container border" style="margin-top: 100px">
+    <div class="container mt-5">
+      <h3 class="text-center">Historia BMI</h3>
     <?php
       // include 'wykres.php';
       include 'chartjsHistory.php';

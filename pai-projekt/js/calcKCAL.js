@@ -1,6 +1,6 @@
-let proteing = null;
-let carbonhydratesg = null;
-let fatsg = null;
+let proteinPer = null;
+let carbonhydratesPer = null;
+let fatsPer = null;
 
 function calcKCAL() {
 
@@ -10,11 +10,12 @@ function calcKCAL() {
   let weight = document.getElementById('wghk').value;
   let active = document.getElementById('activek').value;
   let goal = document.getElementById('goalk').value;
+
   let bmr = null;
   let cpm = null;
-  let bmrresult = document.getElementById('bmrresult');
-  let cpmresult = document.getElementById('cpmresult');
+  let perfectWeight = null;
 
+  //cpm
   if (age != "" && growth != "" && weight != "") {
     if (sex == 'm') {
       bmr = (9.99 * weight + 6.25 * growth - 4.92 * age) + 5;
@@ -22,15 +23,35 @@ function calcKCAL() {
       bmr = (9.99 * weight + 6.25 * growth - 4.92 * age) - 161;
     }
     cpm = (parseInt(bmr) * active) + Number(goal);
-    bmrresult.innerHTML = parseInt(bmr) + " kcal";
-    cpmresult.innerHTML = parseInt(cpm) + ' kcal';
-    protein = parseInt(parseInt(cpm) * 0.15);
-    carbonhydrates = parseInt(parseInt(cpm) * 0.55);
-    fats = parseInt(parseInt(cpm) * 0.3);
-    proteing = parseInt(protein / 4);
-    carbonhydratesg = parseInt(carbonhydrates / 4);
-    fatsg = parseInt(fats / 9);
-    document.getElementById('%demand').innerHTML = "15% białka: " + protein + " kcal = " + proteing + "g.<br>55% węglowodanów: " + carbonhydrates + " kcal = " + carbonhydratesg + "g.<br>30% tłuszczu: " + fats + " kcal = " + fatsg + "g.";
+    document.getElementById('bmrresult').innerHTML = parseInt(bmr) + " kcal";
+    if (goal == '-300') {
+      document.getElementById('cpmdesc').innerHTML = "Aby zrzucić kilogramy (0.5 kg tygodniowo) dzienne zapotrzebowanie kaloryczne wynosi*:";
+    } else if (goal == '0') {
+      document.getElementById('cpmdesc').innerHTML = "Aby utrzymać wagę dzienne zapotrzebowanie kaloryczne wynosi*:";
+    } else if (goal == '300') {
+      document.getElementById('cpmdesc').innerHTML = "Aby zbudować masę dzienne zapotrzebowanie kaloryczne wynosi*:";
+    }
+     document.getElementById('cpmresult').innerHTML = parseInt(cpm) + ' kcal';
+  //perfect weight
+
+  if (growth <= 164) {
+    perfectWeight = growth - 100;
+  } else if (growth > 164 && growth <= 175) {
+    perfectWeight = growth - 105;
+  } else if (growth > 175 ) {
+    perfectWeight = growth - 110;
+  }
+  document.getElementById('perfectWeightResult').innerHTML = perfectWeight+' kg';
+  //resource
+    let protein = parseInt(parseInt(cpm) * 0.15);
+    let carbonhydrates = parseInt(parseInt(cpm) * 0.55);
+    let fats = parseInt(parseInt(cpm) * 0.3);
+
+    proteinPer = parseInt(protein / 4);
+    carbonhydratesPer = parseInt(carbonhydrates / 4);
+    fatsPer = parseInt(fats / 9);
+
+    document.getElementById('%demand').innerHTML = "15% białka: " + protein + " kcal = " + proteinPer + "g.<br>55% węglowodanów: " + carbonhydrates + " kcal = " + carbonhydratesPer + "g.<br>30% tłuszczu: " + fats + " kcal = " + fatsPer + "g.";
   } else {
     alert("Uzupełnij wszystkie pola");
   }
@@ -41,7 +62,7 @@ function calcKCAL() {
 }
 
 function draw() {
-  if (proteing != null && carbonhydratesg != null && fatsg != null) {
+  if (proteinPer != null && carbonhydratesPer != null && fatsPer != null) {
     let script = document.createElement('script');
     script.type = 'text/javascript';
 
@@ -54,7 +75,7 @@ function draw() {
       type: 'doughnut',
       data: {
         datasets: [{
-          data: [proteing, carbonhydratesg, fatsg],
+          data: [proteinPer, carbonhydratesPer, fatsPer],
           backgroundColor: ["#ff6666", "#1f77c4", "#d8e549"],
           weight: 10
         }],

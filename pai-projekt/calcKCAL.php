@@ -26,19 +26,19 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><span style="color: red">*</span> Wiek</span>
           </div>
-          <input class="form-control" type="number" name="agek" id="agek" min="1" required>
+          <input class="form-control" type="number" name="agek" id="agek">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text"><span style="color: red">*</span> Wzrost (cm)</span>
           </div>
-          <input class="form-control" type="number" name="grwk" id="grwk" min="100" equired>
+          <input class="form-control" type="number" name="grwk" id="grwk">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text"><span style="color: red">*</span> Waga (kg)</span>
           </div>
-          <input class="form-control" type="number" name="wghk" id="wghk" min="1" required>
+          <input class="form-control" type="number" name="wghk" id="wghk">
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -65,13 +65,16 @@
             <option value="300">Zbudowanie masy</option>
           </select>
         </div>
+        <p class="lead">Opcjonalne - w celu wyliczenia zaawansowanego dziennego zapotrzebowania kalorycznego</p>
         <input class="btn btn-primary" style="width: 400px" type="submit" name="calc" value="Oblicz" onclick="calcKCAL(); draw()">
     </div>
     <div class="container mt-5" id="kcalresult" style="display: none;">
       <h4 class="text-secondary font-weight-normal">Twoja podstawowa przemiana materii (BMR):</h4>
       <h1 class='text-primary' id="bmrresult"></h1>
-      <h4 class="text-secondary font-weight-normal">Aby cel treningowy się spełnił twoje zapotrzebowanie kaloryczne wynosi*:</h4>
+      <h4 class="text-secondary font-weight-normal" id="cpmdesc"></h4>
       <h1 class='text-primary' id="cpmresult"></h1>
+      <h4 class="text-secondary font-weight-normal">Twoja idealna waga wynosi*:</h4>
+      <h1 class='text-primary' id="perfectWeightResult"></h1>
       <h5 id="%demand"></h5>
       <div class="chart-container" style="position: relative; height:40px; width:80px; margin: 0 auto;">
           <canvas id="chart"></canvas>

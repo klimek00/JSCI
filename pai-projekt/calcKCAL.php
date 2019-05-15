@@ -9,8 +9,6 @@
   <body>
     <?php
       include 'header.php';
-      include 'kcalForm.php';
-      include 'footer.html';
     ?>
     <div class="container text-center" style="margin-top: 100px;">
       <h1 class="display-4">Oblicz swoje dzienne zapotrzebowanie kaloryczne!</h1>

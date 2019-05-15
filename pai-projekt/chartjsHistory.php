@@ -1,4 +1,3 @@
-
 <div class="chart-container" style="position: relative; height:10px; width:10px; margin-top: 10px">
     <canvas id="historyChart"></canvas>
 </div>

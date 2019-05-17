@@ -24,7 +24,7 @@
 <div class="bg-white container-fluid text-center text-primary jumbotron jumbotron-fluid lead" id="zalety">
     <span class="display-4 mx-4">Poznaj siebie jeszcze bardziej!</span> <br><br>
     <span class="mx-4 px-4 lead" style="font-size: 25px;">Dla zarejestrowanych użytkowników udostępniamy wykresy z historią wyników BMI: </span><br>
-    <img src="paris.jpg" class="mx-auto d-block mx-4">
+    <img src="img/history.PNG" class="mx-auto d-block mx-4 w-50">
     
 </div>
 <!--

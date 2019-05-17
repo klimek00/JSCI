@@ -22,7 +22,10 @@
     <a class="m-4 btn btn-outline-light w-25" href="register.php">Jeżeli jeszcze go nie masz - Załóż je</a><br>
 </div>
 <div class="bg-white container-fluid text-center text-primary jumbotron jumbotron-fluid lead" id="zalety">
-    sfdsd
+    <span class="display-4 mx-4">Poznaj siebie jeszcze bardziej!</span> <br><br>
+    <span class="mx-4 px-4 lead" style="font-size: 25px;">Dla zarejestrowanych użytkowników udostępniamy wykresy z historią wyników BMI: </span><br>
+    <img src="paris.jpg" class="mx-auto d-block mx-4">
+    
 </div>
 <!--
 <div class="container-fluid" style="margin-top: 80px;">

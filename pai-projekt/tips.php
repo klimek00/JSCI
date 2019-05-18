@@ -7,8 +7,13 @@
 </head>
 <body>
     <?php
+    session_start();
     include 'header.php';
-    include 'carousel.php';
+    
+    
+    include 'pobierzOstatnieBMI.php';
+  
+    
     include 'footer.html';
     ?>
 

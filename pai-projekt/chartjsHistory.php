@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION["id"])) {
  ?>
 <div class="chart-container" style="position: relative; height:10px; width:10px; margin-top: 10px">

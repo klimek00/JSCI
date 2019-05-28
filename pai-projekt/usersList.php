@@ -52,8 +52,8 @@
               echo "<td>".$value["dateOfBirth"]."</td>";
               echo "<td>".$value["gender"]."</td>";
               echo "<td>".$value["perm"]."</td>";
-              echo "<td><a href='editUser.php?id=".$value["ID"]."'>Modify</a> <br> 
-               ";?><a class='btn btn-outline-dark' href='delUser.php' data-toggle='modal' data-target='#theModal'>Delete</a><?php
+              echo "<td><a href='editUser.php?id=".$value["ID"]."'>Modify</a> <br>
+               ";?><a class='btn btn-outline-dark' href='delUser.php' data-toggle='modal' data-target='#deleteModal'>Delete</a><?php
                echo "";
               echo "</tr>";
             }
@@ -65,6 +65,12 @@
       ?>
     </tbody>
   </table>
+</div>
+<div id="deleteModal" class="modal fade text-center">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
 </div>
 <?php
 $conn = null;

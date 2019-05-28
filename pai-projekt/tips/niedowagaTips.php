@@ -1,6 +1,6 @@
 <div class="container-fluid text-center" style="margin-top:70px;">
   <h1 class="text-primary mb-5">Według ostatniego pomiaru, posiadasz niedowagę</h1>
-  <h5 class="lead">Niedowaga to stan masy ciała poniżej wartości uznanych za prawidłowe dla osób o danym wzroście, płci i w określonym wieku. Dłuższa niedowaga może powodować wiele niebezpiecznych skutków dla organizmu.<br /> Poniżej prezentujemy porady na zdrowe zwiększenie masy ciała</h5>
+  <h5 class="lead">Niedowaga to stan masy ciała poniżej wartości uznanych za prawidłowe dla osób o danym wzroście, płci i w określonym wieku. Dłuższa niedowaga może powodować wiele niebezpiecznych skutków dla organizmu.<br /> Poniżej prezentujemy porady na zdrowe zwiększenie masy ciała. Pamiętaj jednak aby każdą diete skonsultować z diabetykiem.</h5>
 <div class="container mt-5">
   <div class="card-columns">
     <div class="card">

@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION["id"])) {
  ?>
 <div class="container-fluid text-center" style="margin-top:70px;">

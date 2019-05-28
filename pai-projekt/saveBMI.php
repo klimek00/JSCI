@@ -35,7 +35,7 @@ if (isset($_GET["bmi"])) {
       </div>
       ';
         }
-        $db = null;
+      $db = null;
     }
 } else {
     echo '

@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION["id"])) {
+ ?>
 <div class="container-fluid text-center" style="margin-top:70px;">
   <h1 class="text-primary mb-5">Według ostatniego pomiaru, posiadasz niedowagę</h1>
   <h5 class="lead">Niedowaga to stan masy ciała poniżej wartości uznanych za prawidłowe dla osób o danym wzroście, płci i w określonym wieku. Dłuższa niedowaga może powodować wiele niebezpiecznych skutków dla organizmu.<br /> Poniżej prezentujemy porady na zdrowe zwiększenie masy ciała. Pamiętaj jednak aby każdą diete skonsultować z diabetykiem.</h5>
@@ -50,3 +54,6 @@
   </div>
 </div>
 </div>
+<?php } else {
+  header("Location: ../index.php");
+} ?>

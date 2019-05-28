@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION["id"])) {
+ ?>
 <div class="container-fluid text-center" style="margin-top:70px;">
   <h1 class="text-primary mb-5">Według ostatniego pomiaru, posiadasz nadwagę</h1>
   <h5 class="lead">Nadwagę powinno się traktować jak wstęp do otyłości, stan ostrzegawczy, sygnał alarmujący, że najwyższy czas zacząć walczyć z nadmiarem kilogramów. <br /> Poniżej prezentujemy porady na zdrowe zrzucenie paru kilogramów. Pamiętaj jednak aby każdą diete skonsultować z diabetykiem.</h5>
@@ -50,3 +54,6 @@
   </div>
 </div>
 </div>
+<?php } else {
+  header("Location: ../index.php");
+} ?>

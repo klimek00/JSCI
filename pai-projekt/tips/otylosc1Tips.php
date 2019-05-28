@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION["id"])) {
+ ?>
 <div class="container-fluid text-center" style="margin-top:70px;">
   <h1 class="text-primary mb-5">Według ostatniego pomiaru, posiadasz otyłość pierwszego stopnia</h1>
   <h5 class="lead">Z otyłością mamy do czynienia, gdy tkanka tłuszczowa przekracza 20% masy ciała u mężczyzn lub 25% masy ciała u kobiet. Do głównych przyczyn jej powstawania można zaliczyć nieodpowiednią dietę oraz brak ruchu. Niestety otyłość niesie ze sobą wiele poważnych zagrożeń dla zdrowia i życia (choroby układu krążenia, cukrzyca typu II, choroby zwyrodnieniowe stawów) <br /> Poniżej prezentujemy porady na zdrowe zrzucenie paru kilogramów. Pamiętaj jednak aby każdą diete skonsultować z diabetykiem.</h5>
@@ -36,3 +40,6 @@
   </div>
 </div>
 </div>
+<?php } else {
+  header("Location: ../index.php");
+} ?>

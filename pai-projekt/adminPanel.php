@@ -1,4 +1,6 @@
 <?php session_start();
+  if(!isset($_GET["action"]))
+      header("Location: adminPanel.php?action=users");
   if (isset($_SESSION["id"])) {
     $id = $_SESSION["id"];
     try {

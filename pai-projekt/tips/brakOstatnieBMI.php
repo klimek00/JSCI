@@ -1,7 +1,7 @@
 <div class="container-fluid text-center text-primary jumbotron jumbotron-fluid bg-white" style="margin-top:70px;">
     <h1><small>Niestety ale nie byliśmy w stanie znaleźć Twojego BMI!</small></h1> <br>
-    <h2 class="mt-4 mb-4"><small>Próbowałeś <a href="../login.php">zalogowania się?</a></small></h2><br>
-    
+    <h2 class="mt-4 mb-4"><small>Próbowałeś <a href="./login.php">zalogowania się?</a></small></h2><br>
+
 </div>
 <div class="bg-primary container-fluid text-center text-primary jumbotron jumbotron-fluid lead">
     <span class="text-white lead" style="font-size: 25px;">Część funkcji naszej aplikacji możesz przetesować pozostająć Gościem!</span><br>
@@ -16,5 +16,5 @@
     <span class="display-4 mx-4">Poznaj siebie jeszcze bardziej!</span> <br><br>
     <span class="mx-4 px-4 lead" style="font-size: 25px;">Dla zarejestrowanych użytkowników udostępniamy wykresy z historią wyników BMI: </span><br>
     <img src="img/history.PNG" class="mx-auto d-block mx-4 w-50">
-    
+
 </div>

@@ -19,14 +19,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-<!--
-    <meta charset="utf-8">
-    <title>Panel administracyjny</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/sidebar.css">
-    <script src="./js/jquery/jquery.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
--->
       <?php include 'head_HTML.html'; ?>
   </head>
   <body>

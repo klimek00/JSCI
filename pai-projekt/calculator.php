@@ -1,3 +1,4 @@
+
 <script src="./js/calcBMI.js" charset="utf-8"></script>
 <div class="modal-header">
   <h3 class="modal-title"> Oblicz swoje BMI!</h3>

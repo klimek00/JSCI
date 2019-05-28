@@ -1,7 +1,4 @@
-<?php
-session_start();
-if (isset($_SESSION["id"])) {
- ?>
+
 <div class="container-fluid text-center text-primary jumbotron jumbotron-fluid bg-white" style="margin-top:70px;">
     <h1><small>Niestety ale nie byliśmy w stanie znaleźć Twojego BMI!</small></h1> <br>
     <h2 class="mt-4 mb-4"><small>Próbowałeś <a href="./login.php">zalogowania się?</a></small></h2><br>
@@ -22,6 +19,3 @@ if (isset($_SESSION["id"])) {
     <img src="img/history.PNG" class="mx-auto d-block mx-4 w-50">
 
 </div>
-<?php } else {
-  header("Location: ../index.php");
-} ?>

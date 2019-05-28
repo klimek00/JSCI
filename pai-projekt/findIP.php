@@ -1,11 +1,4 @@
 <?php
-  $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  if ($actual_link == "http://localhost/bmi/JSCI/pai-projekt/calculator.php") {
-    header("HTTP/1.1 403 Forbidden");
-    header("Location: index.php");
-  }
-?>
-<?php
 function getRealIpAddr()
 {
   $ipaddress = '';

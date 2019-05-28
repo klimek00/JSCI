@@ -8,11 +8,11 @@
     }
       $query = "SELECT * FROM users WHERE ID = $id AND perm = 'admin'";
       $result = $db->query($query);
-      if ($result === false) {
+      if (!$result) {
         header("Location: index.php");
       } else {
         $rows = $result->fetch();
-        if ($rows != false) {
+        if ($rows) {
 ?>
 <div class="container-fluid mt-4">
   <h1 class="text-center">List of users</h1>
@@ -36,7 +36,7 @@
           $conn = new PDO("sqlite:database.sqlite");
           $sql = "SELECT * FROM users";
           $result = $conn->query($sql);
-          if ($result === false) {
+          if (!$result) {
             echo "<SCRIPT type='text/javascript'>
             alert('Error!!!');
               window.location.replace(\"adminPanel.php\");
@@ -52,7 +52,9 @@
               echo "<td>".$value["dateOfBirth"]."</td>";
               echo "<td>".$value["gender"]."</td>";
               echo "<td>".$value["perm"]."</td>";
-              // echo "<td><a href='modUser.php?id=".$value["ID"]."'>Modify</a> <br> <a href='delUser.php?id=".$value["ID"]."'>Delete</a></td>";
+              echo "<td><a href='editUser.php?id=".$value["ID"]."'>Modify</a> <br> 
+               ";?><a class='btn btn-outline-dark' href='delUser.php' data-toggle='modal' data-target='#theModal'>Delete</a><?php
+               echo "";
               echo "</tr>";
             }
           }

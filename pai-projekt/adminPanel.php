@@ -10,21 +10,24 @@
     }
       $query = "SELECT * FROM users WHERE ID = $id AND perm = 'admin'";
       $result = $db->query($query);
-      if ($result === false) {
+      if (!$result) {
         header("Location: index.php");
       } else {
         $rows = $result->fetch();
-        if ($rows != false) {
+        if ($rows) {
 ?>
 <!DOCTYPE html>
 <html>
   <head>
+<!--
     <meta charset="utf-8">
     <title>Panel administracyjny</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/sidebar.css">
     <script src="./js/jquery/jquery.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+-->
+      <?php include 'head_HTML.html'; ?>
   </head>
   <body>
     <div class="d-flex">
@@ -35,9 +38,6 @@
       </div>
       <div class="list-group list-group-flush">
         <a class="list-group-item list-group-item-action bg-light" href="adminPanel.php?action=users">List of users</a>
-      </div>
-      <div class="list-group list-group-flush">
-        <a class="list-group-item list-group-item-action bg-light" href="adminPanel.php?action=log">Logs</a>
       </div>
       <div class="list-group list-group-flush">
         <a class="list-group-item list-group-item-action bg-light" href="adminPanel.php?action=badlogin">Bad login</a>
@@ -51,13 +51,9 @@
         if (isset($_GET["action"])) {
           if ($_GET["action"] == 'users') {
             include 'usersList.php';
-          } elseif ($_GET["action"] == 'log') {
-            include 'logsList.php';
           } elseif ($_GET["action"] == 'badlogin') {
             include 'badLogin.php';
           }
-        } else {
-          include 'logsList.php';
         }
       ?>
     </div>

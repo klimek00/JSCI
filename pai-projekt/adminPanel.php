@@ -51,8 +51,13 @@
         if (isset($_GET["action"])) {
           if ($_GET["action"] == 'users') {
             include 'usersList.php';
-          } elseif ($_GET["action"] == 'badlogin') {
+          } else if ($_GET["action"] == 'badlogin') {
             include 'badLogin.php';
+          } else if ($_GET['action'] == 'success') {
+            echo "<div class='container-fluid mt-4'>
+                <h1 class='text-center'>Action performed succesfully!</h1>
+                </div>
+                ";
           }
         }
       ?>

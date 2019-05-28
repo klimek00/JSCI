@@ -27,7 +27,7 @@
         <th>Date of birth</th>
         <th>Gender</th>
         <th>Permission</th>
-        <th>Actions</th>
+        <th colspan="2" style="text-align: center">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -52,9 +52,8 @@
               echo "<td>".$value["dateOfBirth"]."</td>";
               echo "<td>".$value["gender"]."</td>";
               echo "<td>".$value["perm"]."</td>";
-              echo "<td><a href='editUser.php?id=".$value["ID"]."'>Modify</a> <br>
-               ";?><a class='btn btn-outline-dark' href='delUser.php' data-toggle='modal' data-target='#deleteModal'>Delete</a><?php
-               echo "";
+              echo "<td><a class='btn btn-outline-dark' href='editUser.php?id=".$value['ID']."' data-toggle='modal' data-target='#editModal'>Modify</a></td>
+                    <td><a class='btn btn-outline-dark' href='delUser.php?id=".$value['ID']."' data-toggle='modal' data-target='#deleteModal'>Delete</a></td>";
               echo "</tr>";
             }
           }
@@ -67,6 +66,12 @@
   </table>
 </div>
 <div id="deleteModal" class="modal fade text-center">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+<div id="editModal" class="modal fade text-center">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     </div>

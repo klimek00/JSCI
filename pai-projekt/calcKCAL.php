@@ -65,7 +65,7 @@
             <option value="300">Zbudowanie masy</option>
           </select>
         </div>
-        <p class="lead">Opcjonalne - w celu wyliczenia zaawansowanego dziennego zapotrzebowania kalorycznego</p>
+        <!-- <p class="lead">Opcjonalne - w celu wyliczenia zaawansowanego dziennego zapotrzebowania kalorycznego</p> -->
         <input class="btn btn-primary" style="width: 400px" type="submit" name="calc" value="Oblicz" onclick="calcKCAL(); draw()">
     </div>
     <div class="container mt-5" id="kcalresult" style="display: none;">

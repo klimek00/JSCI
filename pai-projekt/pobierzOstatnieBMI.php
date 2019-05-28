@@ -21,6 +21,9 @@ if (isset($_SESSION["id"])) {
         foreach ($result as $tmp) {
             $arr[] = floatval($tmp['bmiResult']);
         }
+        if ($arr == null) {
+          include './tips/brakOstatnieBMI.php';
+        }
         if ($arr[0] <= 18.5) {
             include './tips/niedowagaTips.php';
         } else if ($arr[0] > 18.5 && $arr[0] <= 26) {

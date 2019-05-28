@@ -1,8 +1,12 @@
-
 <div class="container-fluid text-center text-primary jumbotron jumbotron-fluid bg-white" style="margin-top:70px;">
     <h1><small>Niestety ale nie byliśmy w stanie znaleźć Twojego BMI!</small></h1> <br>
-    <h2 class="mt-4 mb-4"><small>Próbowałeś <a href="./login.php">zalogowania się?</a></small></h2><br>
-
+    <?php
+      if (isset($_SESSION["id"])) {
+        echo '<h2 class="mt-4 mb-4"><small>Zapisz swoje pierwsze wyliczenie BMI.</small></h2><br>';
+      } else {
+        echo '<h2 class="mt-4 mb-4"><small>Próbowałeś <a href="./login.php">zalogowania się?</a></small></h2><br>';
+      }
+    ?>
 </div>
 <div class="bg-primary container-fluid text-center text-primary jumbotron jumbotron-fluid lead">
     <span class="text-white lead" style="font-size: 25px;">Część funkcji naszej aplikacji możesz przetesować pozostająć Gościem!</span><br>

@@ -1,5 +1,5 @@
 <div class="container-fluid text-center text-primary jumbotron jumbotron-fluid bg-white" style="margin-top:70px;">
-    <h1><small>Niestety ale nie byliśmy w stanie znaleźć Twojego BMI!</small></h1> <br>
+    <h1><small>Niestety, ale nie byliśmy w stanie znaleźć Twojego BMI!</small></h1> <br>
     <?php
       if (isset($_SESSION["id"])) {
         echo '<h2 class="mt-4 mb-4"><small>Zapisz swoje pierwsze wyliczenie BMI.</small></h2><br>';
@@ -9,7 +9,7 @@
     ?>
 </div>
 <div class="bg-primary container-fluid text-center text-primary jumbotron jumbotron-fluid lead">
-    <span class="text-white lead" style="font-size: 25px;">Część funkcji naszej aplikacji możesz przetesować pozostająć Gościem!</span><br>
+    <span class="text-white lead" style="font-size: 25px;">Część funkcji naszej aplikacji możesz przetesować pozostając Gościem!</span><br>
     <a class="m-4 btn btn-outline-light w-25" href="calculator.php" data-toggle="modal" data-target="#theModal">Oblicz BMI</a>
     <a class="m-4 btn btn-outline-light w-25" href="calcKCAL.php">Oblicz zapotrzebowanie kaloryczne</a><br>
     <span class="text-white lead m-4" style="font-size: 25px;">Jednak część funkcjonalności wymaga zalogowania się!</span><br>

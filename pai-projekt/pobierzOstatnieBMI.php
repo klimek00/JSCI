@@ -23,8 +23,7 @@ if (isset($_SESSION["id"])) {
         }
         if ($arr == null) {
           include './tips/brakOstatnieBMI.php';
-        }
-        if ($arr[0] <= 18.5) {
+        } else if ($arr[0] <= 18.5) {
             include './tips/niedowagaTips.php';
         } else if ($arr[0] > 18.5 && $arr[0] <= 26) {
             include './tips/prawidlowaTips.php';

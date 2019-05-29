@@ -12,7 +12,7 @@
   <?php
       include 'header.php';
     ?>
-  <div style="margin-top: 100px">
+  <div style="margin-top: 70px">
     <ol>
       <li>Postanowienia ogólne</li>
       <li>Definicje</li>

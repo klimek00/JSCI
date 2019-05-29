@@ -30,6 +30,9 @@
 <div class="alert alert-danger" style="display: none" id="alert">
   Wypełnij wszystkie pola!!!
 </div>
+<div class="alert alert-danger" style="display: none" id="imbecyl">
+  Niewłaściwe dane!!!
+</div>
 <div id="infoSave"></div>
 <h5 class="p-3 text-dark">Niewłaściwe BMI? <a href="calcKCAL.php">Oblicz dzienne zapotrzebowanie kaloryczne</a></h5>
 <div class="modal-footer">

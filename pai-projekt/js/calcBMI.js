@@ -22,7 +22,12 @@ function calcBMI(){
          document.getElementById('infoSave').innerHTML = "";
          x = null;
 
-    } else {
+    } else if ((weight < 20 || weight > 700) || (growth < 100 || growth > 300)) {
+			document.getElementById('imbecyl').style.display = "block";
+			text.innerHTML = "";
+			document.getElementById('infoSave').innerHTML = "";
+			x = null;
+		} else {
        document.getElementById('alert').style.display = "none";
       let bmi = (weight / Math.pow(growth,2))*10000;
       x = Math.round(bmi*100)/100;

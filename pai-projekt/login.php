@@ -45,11 +45,7 @@ if (!isset($_SESSION["id"])){ ?>
               } catch(PDOException $e) {
                 echo "Error!" . $e->getMessage();
               }
-          // if (strpos($passwd, "' OR ") ) {
-
-          // } else {
           $query = "SELECT id, login, passwd FROM users WHERE login = '$login' AND passwd ='$passwd'";
-        // }
           $result = $db->query($query);
           if ($result === false) {
               echo '<div class="container alert alert-danger alert-dismissible fade show" style="margin-top: 20px">

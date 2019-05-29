@@ -35,6 +35,9 @@
         <a class="list-group-item list-group-item-action bg-light" href="adminPanel.php?action=badlogin">Bad login</a>
       </div>
       <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action bg-light" href="adminPanel.php?action=charts">Charts</a>
+      </div>
+      <div class="list-group list-group-flush">
         <a class="list-group-item list-group-item-action bg-light" href="logout.php">Logout</a>
       </div>
     </div>
@@ -45,6 +48,8 @@
             include 'usersList.php';
           } else if ($_GET["action"] == 'badlogin') {
             include 'badLogin.php';
+          } else if ($_GET["action"] == 'charts') {
+            include 'charts.php';
           } else if ($_GET['action'] == 'success') {
             echo "<div class='container-fluid mt-4'>
                 <h1 class='text-center'>Action performed succesfully!</h1>
